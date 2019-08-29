@@ -10,7 +10,7 @@
     flex: 1 1 auto;
 }
 
-mat-list a {
+mat-toolbar a {
     display: inline-block;
     margin: 0 10px;
     color: aqua;

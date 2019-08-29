@@ -1,0 +1,18 @@
+.nav-link {
+    font-size: large;
+}
+.t-logo {
+    width: 192px;
+    height: 108px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+mat-list a {
+    display: inline-block;
+    margin: 0 10px;
+    color: aqua;
+    text-decoration: none;
+}

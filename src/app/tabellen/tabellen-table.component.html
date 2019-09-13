@@ -1,0 +1,47 @@
+<div class='card'>
+    <div class='card-header'>
+        {{pageTitle}}
+    </div>
+    <div class='card-body'>
+        <div class='row'>
+            <div class='col-md2'>Tabellen 4</div>
+            <div class='row'>
+                <div class='col-md6'>
+                    <h4>Original utgave</h4>
+                </div>
+            </div>
+            <div class='table-responsive'>
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                    <!--Basics Column-->
+                    <ng-container matColumnDef="category">
+                            <th mat-header-cell *matHeaderCellDef> Category </th>
+                            <td mat-cell *matCellDef="let element"> {{element.category}}</td>
+                    </ng-container>
+
+                    <!--Basics Column-->
+                    <ng-container matColumnDef="name">
+                            <th mat-header-cell *matHeaderCellDef> Name </th>
+                            <td mat-cell *matCellDef="let element"> {{element.name}}</td>
+                    </ng-container>
+
+                    <!--Basics Column-->
+                    <ng-container matColumnDef="quantity">
+                            <th mat-header-cell *matHeaderCellDef> Quantity </th>
+                            <td mat-cell *matCellDef="let element"> {{element.quantity}}</td>
+                    </ng-container>
+
+                    <!--Basics Column-->
+                    <ng-container matColumnDef="allDrink">
+                            <th mat-header-cell *matHeaderCellDef> All drink </th>
+                            <td mat-cell *matCellDef="let element"> {{element.allDrink}}</td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+                        
+            </div>
+        </div>
+    </div>
+</div>

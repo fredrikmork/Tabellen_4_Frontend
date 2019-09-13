@@ -13,3 +13,21 @@ thead {
 th.mat-sort-header-sorted {
     color: black;
 }
+tr:hover {background-color: rgb(55, 55, 55);}
+td:hover {color: rgb(61, 206, 223);}
+th {color: rgb(243,71,91);}
+td {color: white;}
+h3 {
+    color: rgb(243,71,91);
+}
+p {
+    color: white;
+    font-size: 16px;
+}
+tabellen-table {
+    color: white;
+}
+table p {
+    color: white;
+}
+

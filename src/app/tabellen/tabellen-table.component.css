@@ -1,5 +1,5 @@
 table {
-    width: 70%;
+    width: 30%;
     background-color: rgb(66, 66, 66);
     color: white;
     font-family: 'fifa';
@@ -20,6 +20,7 @@ th {color: rgb(243,71,91);}
 td {
     color: white;
     text-align: left;
+    font-size: 0.4em;
 }
 
 h3 { color: rgb(243,71,91);}

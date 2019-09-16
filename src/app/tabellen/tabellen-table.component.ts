@@ -28,6 +28,7 @@ const TABELLEN_DATA: TabellenElement[] = [
 
 
 export class TabellenTableComponent {
+    data: undefined;
     pageTitle: string = 'Tabellen';
     tabellen: ITabellen[] = [];
     displayedColumns: string [] = ['category', 'name', 'quantity', 'allDrink'];

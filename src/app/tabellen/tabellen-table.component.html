@@ -9,6 +9,7 @@
                     <br>
                     <h3>Tabellen 4</h3>
                     <p>Original utgave</p>
+        
                 </div>
             </div>
             <div class='table-responsive'>
@@ -29,13 +30,28 @@
                     <!--Basics Column-->
                     <ng-container matColumnDef="quantity">
                             <th mat-header-cell *matHeaderCellDef> Quantity </th>
-                            <td mat-cell *matCellDef="let element"> {{element.quantity === false ? '' : element.quantity}}</td>
+                            <td mat-cell *matCellDef="let element"> 
+                                {{ element.quantity < 11 ?  element.quantity + ' slurker' : '' }}
+                                <div [ngSwitch]="element.quantity">
+                                        <div *ngSwitchCase="20">1/2 </div>
+                                        <div *ngSwitchCase="40">1 </div>
+                                        <div *ngSwitchCase="80">2 </div>
+                                        <div *ngSwitchCase="120">3 </div>
+                                        <div *ngSwitchCase="240">Gå og legg deg, kvelden er over 6 </div>
+                                        <div *ngSwitchDefault></div>
+                                </div>
+                                <span [ngClass]="element.quantity < 11 ? '' : 'fas fa-beer' "></span>
+                                
+                            </td>
                     </ng-container>
-
+                    
                     <!--Basics Column-->
-                    <ng-container matColumnDef="allDrink">
+                    <ng-container matColumnDef="allDrink" class='allDrinkStyle'>
                             <th mat-header-cell *matHeaderCellDef> All drink </th>
-                            <td mat-cell *matCellDef="let element"> {{element.allDrink}}</td>
+                            <td mat-cell *matCellDef="let element"> 
+                                {{element.allDrink === false ? '' : ''}}
+                                <span [ngClass]="element.allDrink === false ? '' : 'fas fa-glass-cheers' "></span>
+                            </td>
                     </ng-container>
 
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

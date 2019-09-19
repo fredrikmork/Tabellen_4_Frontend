@@ -1,0 +1,45 @@
+[
+    { 
+        "category": "Basics", 
+        "name": "Innkast", 
+        "quantity": 3, 
+        "allDrink": false
+    },
+    { 
+        "category": "Goals", 
+        "name": "Utspill", 
+        "quantity": 3, 
+        "allDrink": false
+    },
+    { 
+        "category": "Saf", 
+        "name": "Corner", 
+        "quantity": 3, 
+        "allDrink": false
+    },
+
+    { 
+        "category": "Absurd", 
+        "name": "Offside", 
+        "quantity": 6, 
+        "allDrink": true
+    },
+    { 
+        "category": "Basics", 
+        "name": "Skadebytte", 
+        "quantity": 10, 
+        "allDrink": true
+    },
+    { 
+        "category": "Goal", 
+        "name": "Vanlig", 
+        "quantity": 6, 
+        "allDrink": false
+    },
+    { 
+        "category": "Goal", 
+        "name": "Scorpion", 
+        "quantity": 80, 
+        "allDrink": false
+    }
+]

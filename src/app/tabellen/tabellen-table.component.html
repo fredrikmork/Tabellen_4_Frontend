@@ -1,64 +1,45 @@
-<div class='card'>
-    <div class='card-header'>
-        {{pageTitle}}
-    </div>
-    <div class='card-body'>
-        <div class='row'>
-            <div class='row'>
-                <div class='col-md6'>
-                    <br>
-                    <h3>Tabellen 4</h3>
-                    <p>Original utgave</p>
-        
+<div class='table-responsive'>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                    <!--Basics Column-->
+        <ng-container matColumnDef="category">
+            <th mat-header-cell *matHeaderCellDef> Category </th>
+            <td mat-cell *matCellDef="let rule"> {{rule.category}}</td>
+        </ng-container>
+
+                    <!--Basics Column-->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Hva </th>
+            <td mat-cell *matCellDef="let rule"> {{rule.name}}</td>
+        </ng-container>
+
+                    <!--Basics Column-->
+        <ng-container matColumnDef="quantity">
+            <th mat-header-cell *matHeaderCellDef> Mengde </th>
+            <td mat-cell *matCellDef="let rule"> 
+                        {{ rule.quantity < 11 ?  rule.quantity + ' slurker' : '' }}
+                <div [ngSwitch]="rule.quantity">
+                    <div *ngSwitchCase="20">1/2 </div>
+                    <div *ngSwitchCase="40">1 </div>
+                    <div *ngSwitchCase="80">2 </div>
+                    <div *ngSwitchCase="120">3 </div>
+                    <div *ngSwitchCase="240">Gå og legg deg, kvelden er over 6 </div>
+                    <div *ngSwitchDefault></div>
                 </div>
-            </div>
-            <div class='table-responsive'>
-                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
+                <span [ngClass]="rule.quantity < 11 ? '' : 'fas fa-beer' "></span>                    
+            </td>
+        </ng-container>   
+                 
                     <!--Basics Column-->
-                    <ng-container matColumnDef="category">
-                            <th mat-header-cell *matHeaderCellDef> Category </th>
-                            <td mat-cell *matCellDef="let element"> {{element.category}}</td>
-                    </ng-container>
-
-                    <!--Basics Column-->
-                    <ng-container matColumnDef="name">
-                            <th mat-header-cell *matHeaderCellDef> Hva </th>
-                            <td mat-cell *matCellDef="let element"> {{element.name}}</td>
-                    </ng-container>
-
-                    <!--Basics Column-->
-                    <ng-container matColumnDef="quantity">
-                            <th mat-header-cell *matHeaderCellDef> Mengde </th>
-                            <td mat-cell *matCellDef="let element"> 
-                                {{ element.quantity < 11 ?  element.quantity + ' slurker' : '' }}
-                                <div [ngSwitch]="element.quantity">
-                                    <div *ngSwitchCase="20">1/2 </div>
-                                    <div *ngSwitchCase="40">1 </div>
-                                    <div *ngSwitchCase="80">2 </div>
-                                    <div *ngSwitchCase="120">3 </div>
-                                    <div *ngSwitchCase="240">Gå og legg deg, kvelden er over 6 </div>
-                                    <div *ngSwitchDefault></div>
-                                </div>
-                                <span [ngClass]="element.quantity < 11 ? '' : 'fas fa-beer' "></span>
-                                
-                            </td>
-                    </ng-container>
-                    
-                    <!--Basics Column-->
-                    <ng-container matColumnDef="allDrink" class='allDrinkStyle'>
-                            <th mat-header-cell *matHeaderCellDef> Alle drikker </th>
-                            <td mat-cell *matCellDef="let element"> 
-                                {{element.allDrink === false ? '' : ''}}
-                                <span [ngClass]="element.allDrink === false ? '' : 'fas fa-glass-cheers' "></span>
-                            </td>
-                    </ng-container>
-
-                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                </table>
-                        
-            </div>
-        </div>
-    </div>
+        <ng-container matColumnDef="allDrink" class='allDrinkStyle'>
+            <th mat-header-cell *matHeaderCellDef> Alle drikker </th>
+            <td mat-cell *matCellDef="let rule"> 
+                        {{rule.allDrink === false ? '' : ''}}
+                <span [ngClass]="rule.allDrink === false ? '' : 'fas fa-glass-cheers' "></span>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+                       
 </div>
+       

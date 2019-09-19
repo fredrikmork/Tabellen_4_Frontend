@@ -1,6 +1,5 @@
-import { Component, ViewChild } from "@angular/core";
-import { MatSort, MatTableDataSource } from '@angular/material';
-import { NavbarComponent } from "../header/navbar.component";
+import { Component, ViewChild, Input } from "@angular/core";
+import { MatSort} from '@angular/material';
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 
 
@@ -14,21 +13,18 @@ import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 export class TabellenTableComponent {
     pageTitle: string = 'Tabellen';
     displayedColumns: string [] = ['category', 'name', 'quantity', 'allDrink'];
-    dataSource = undefined;
+    @Input() dataSource;
+
     
     constructor(private http: HttpClient) {}
 
     @ViewChild(MatSort, {static: true}) sort: MatSort;
 
     ngOnInit() { 
-          this.http.get('api/rules/rules.json').subscribe(
-            data => {
-              this.dataSource = data;
-            },
-            (err: HttpErrorResponse) => {
-              console.log (err.message);
-            }
-          );
+      console.log(this.dataSource);
+
     }
+
+ 
 }
 

@@ -4,16 +4,16 @@
         </div>
         <div class='card-body'>
             <div class='row'>
-                <div class='row'>
+                <div class='row' *ngIf='rules && rules.length'>
                     <div class='col-md6'>
                         <br>
                         <h3>Tabellen 4</h3>
                         <p>Original utgave</p>
                     </div>
-                    <tabellen-table *ngFor=""></tabellen-table>
-                    <tabellen-table></tabellen-table>
-                    <tabellen-table></tabellen-table>
-                    <tabellen-table></tabellen-table>
+                    <tabellen-table [dataSource]="getRulesFromCategory('basics')"></tabellen-table>
+                    <tabellen-table [dataSource]="getRulesFromCategory('goals')"></tabellen-table>
+                    <tabellen-table [dataSource]="getRulesFromCategory('saf')"></tabellen-table>
+                    <tabellen-table [dataSource]="getRulesFromCategory('absurd')"></tabellen-table>
                 </div>
             </div>
         </div>

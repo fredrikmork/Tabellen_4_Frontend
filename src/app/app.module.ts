@@ -10,7 +10,6 @@ import { NavbarComponent } from './header/navbar.component';
 import { TabellenTableComponent } from "./tabellen/tabellen-table.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
-import { from } from 'rxjs';
 import { TabellenComponent } from './tabellen/tabellen.component';
 
 @NgModule({

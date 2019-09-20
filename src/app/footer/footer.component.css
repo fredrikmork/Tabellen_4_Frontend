@@ -1,0 +1,9 @@
+.container {
+    height: 150px;
+    display: inline-block;
+    width: 100vw;
+    color: white;
+}
+.spacer {
+    flex: 1 1 auto;
+}

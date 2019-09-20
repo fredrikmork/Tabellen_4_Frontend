@@ -11,13 +11,15 @@ import { TabellenTableComponent } from "./tabellen/tabellen-table.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
 import { TabellenComponent } from './tabellen/tabellen.component';
+import { FooterComponent} from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     TabellenComponent,
-    TabellenTableComponent
+    TabellenTableComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -3,3 +3,15 @@ p {
     color: white;
     font-size: 16px;
 }
+
+tabellen-table {
+    vertical-align: top;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 0fr)); /* see notes below */
+    justify-content: center;
+}

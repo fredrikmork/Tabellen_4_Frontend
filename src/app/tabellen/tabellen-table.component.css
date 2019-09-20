@@ -1,26 +1,32 @@
 table {
-    width: 30%;
+    width: 350px;
     background-color: rgb(66, 66, 66);
     color: white;
     font-family: 'fifa';
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 5%;
+    margin : 4px;
+    display: inline-block;
+    margin-top: 0%;
 }
+table p {color: white;}
+
 thead {color: rgb(61,206.223);}
 
 th.mat-sort-header-sorted {color: black;}
 
 tr:hover {background-color: rgb(55, 55, 55);}
 
-td:hover {color: rgb(61, 206, 223);}
+table td:hover {color: rgb(61, 206, 223);}
 
-th {color: rgb(243,71,91);}
+table th {
+    color: rgb(243,71,91);
+    text-align: center;
+}
 
-td {
+table td {
     color: white;
-    text-align: left;
+    text-align: center;
     font-size: 0.4em;
+    padding: 1em;
 }
 
 p {
@@ -28,8 +34,5 @@ p {
     font-size: 16px;
 }
 
-tabellen-table {color: white;}
-
-table p {color: white;}
 
 

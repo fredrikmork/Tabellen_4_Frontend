@@ -26,6 +26,7 @@ import { FooterComponent} from './footer/footer.component';
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot([
+      {path: 'regler', component: TabellenComponent },
       {path: 'tabellen', component: TabellenComponent },
       {path: '', redirectTo: 'tabellen', pathMatch: 'full' },
       {path: '**', redirectTo: 'tabellen', pathMatch: 'full' }

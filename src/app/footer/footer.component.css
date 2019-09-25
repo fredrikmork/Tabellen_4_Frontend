@@ -4,6 +4,18 @@
     width: 100vw;
     color: white;
 }
+.column {
+    text-align: center;
+}
+.columns {
+    display: inline-block;
+}
 .spacer {
     flex: 1 1 auto;
+}
+
+p {
+    font-size: 0.1em;
+    width: 30%;
+    text-align: center;
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from 'app/profile/authentication.service';
 
 @Component({
     selector: 'navbar',
@@ -6,8 +7,18 @@ import { Component } from '@angular/core';
     styleUrls: ['./navbar.component.css']
 })
 
-export class NavbarComponent {
+export class NavbarComponent{
+
+  constructor(private authService: AuthenticationService) {}
   pageTitle: string = 'Tabellen';
 
+  ngOnInit(){
+    console.log(this.authService.getUserName)
+  }
 
+
+
+googleLogin(){
+  this.authService.GoogleAuth();
+}
 }

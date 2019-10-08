@@ -47,7 +47,7 @@ li {
 
 .share-button {
     color: white !important;
-    background-color: none !important;
+    background: transparent;
 }
 .share-button:hover {
     color: rgb(61, 206, 223) !important;

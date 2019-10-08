@@ -29,4 +29,5 @@ export class TabellenComponent {
   getRulesFromCategory(category: any) {
     return this.rules.filter(rule => rule.category.toLowerCase() === category)    
   }
+
 }

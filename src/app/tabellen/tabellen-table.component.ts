@@ -12,7 +12,8 @@ import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 
 export class TabellenTableComponent {
     pageTitle: string = 'Tabellen';
-    displayedColumns: string [] = ['category', 'name', 'quantity', 'allDrink'];
+    displayedColumns: string [] = ['name', 'quantity', 'allDrink'];
+    test: string;
     @Input() dataSource;
 
     
@@ -22,8 +23,14 @@ export class TabellenTableComponent {
 
     ngOnInit() { 
       console.log(this.dataSource);
-
+      this.test= this.dataSource[0].category;
+      console.log("Denne er: " + this.test);
     }
+
+  logg(){
+    console.log("hei");
+   
+  }
 
  
 }

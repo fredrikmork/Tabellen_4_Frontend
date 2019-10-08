@@ -6,6 +6,8 @@ import { MatButtonModule,
     MatToolbarModule, 
     MatSidenavModule 
 } from '@angular/material';
+
+import {MatExpansionModule} from '@angular/material/expansion';
 //import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NgModule } from '@angular/core';
 
@@ -18,6 +20,7 @@ import { NgModule } from '@angular/core';
               MatToolbarModule,
               MatSidenavModule,
               FlexLayoutModule,
+              MatExpansionModule
               //AngularFontAwesomeModule
               ],
     exports: [MatButtonModule, 
@@ -26,7 +29,8 @@ import { NgModule } from '@angular/core';
               MatIconModule, 
               MatToolbarModule,
               MatSidenavModule,
-              FlexLayoutModule
+              FlexLayoutModule,
+              MatExpansionModule
               ],
 })
 export class MaterialModule { }

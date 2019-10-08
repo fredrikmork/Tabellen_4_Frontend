@@ -1,21 +1,77 @@
 .container {
-    height: 150px;
-    display: inline-block;
+    height: 180px;
+    position: sticky;
     width: 100vw;
     color: white;
-}
-.column {
+    bottom: 0;
     text-align: center;
 }
-.columns {
-    display: inline-block;
+.column {
+    display: inline-table;
+    height: 150px;
+    width: 30%;
+    text-align: center;
 }
+
 .spacer {
     flex: 1 1 auto;
 }
+a {
+    color: white;
+    text-decoration: none;
+    display: inline;
+}
+a:hover {
+    color: rgb(61, 206, 223);
+}
 
 p {
-    font-size: 0.1em;
-    width: 30%;
+    font-size: 0.6em;
     text-align: center;
+}
+li {
+    list-style: none;
+}
+.liSo {
+    font-size: 2em;
+}
+/*---Icons and buttons----*/
+.fa-instagram {
+    color: white !important;
+    text-align: center;
+}
+
+.fa-instagram:hover {
+    color: rgb(61, 206, 223) !important;
+}
+
+.share-button {
+    color: white !important;
+    background-color: none !important;
+}
+.share-button:hover {
+    color: rgb(61, 206, 223) !important;
+}
+
+button {
+    font-family: 'fifa';
+    border: 0;
+    padding: 0;
+    background-color: rgb(243, 71, 91);
+}
+
+hr.new1 {
+    text-align: center;
+    width: 80%;
+    border-top: 1px solid rgb(248, 86, 100);
+}
+
+h1 {
+    text-align: center;
+    top: 0%;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
 }

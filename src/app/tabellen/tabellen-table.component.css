@@ -1,5 +1,5 @@
 table {
-    width: 350px;
+    width: 300px;
     background-color: rgb(66, 66, 66);
     color: white;
     font-family: 'fifa';
@@ -12,6 +12,10 @@ table p {color: white;}
 thead {color: rgb(61,206.223);}
 
 th.mat-sort-header-sorted {color: black;}
+
+table .categoryHeader {
+    color: rgb(236, 245, 118);
+}
 
 tr:hover {background-color: rgb(55, 55, 55);}
 

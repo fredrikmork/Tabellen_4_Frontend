@@ -2,7 +2,7 @@ table {
     width: 300px;
     background-color: rgb(66, 66, 66);
     color: white;
-    font-family: 'fifa';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin : 4px;
     display: inline-block;
     margin-top: 0%;
@@ -16,7 +16,9 @@ th.mat-sort-header-sorted {color: black;}
 table .categoryHeader {
     color: rgb(236, 245, 118);
 }
-
+tr {
+    height: 500px;
+}
 tr:hover {background-color: rgb(55, 55, 55);}
 
 table td:hover {color: rgb(61, 206, 223);}
@@ -24,6 +26,8 @@ table td:hover {color: rgb(61, 206, 223);}
 table th {
     color: rgb(243,71,91);
     text-align: center;
+    font-family: 'fifa';
+    font-size: 1rem;
 }
 
 table td {

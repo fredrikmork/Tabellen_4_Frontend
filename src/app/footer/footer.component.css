@@ -54,7 +54,7 @@ li {
 }
 
 button {
-    font-family: 'fifa';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: 0;
     padding: 0;
     background-color: rgb(243, 71, 91);
@@ -69,9 +69,11 @@ hr.new1 {
 h1 {
     text-align: center;
     top: 0%;
+    font-family: 'fifa';
 }
 
 footer {
     bottom: 0;
     width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

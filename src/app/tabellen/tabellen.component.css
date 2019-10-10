@@ -1,4 +1,5 @@
 h3 { color: rgb(243,71,91);}
+
 p {
     color: white;
     font-size: 16px;
@@ -17,4 +18,18 @@ tabellen-table {
 }
 iframe {
     margin-left: 50px;
+}
+
+.ruleExplain {
+    border: 2px solid white;;
+    margin-left: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 0.7rem;
+    text-align: left;
+    width: 296px;
+}
+
+.ruleExplain th{
+    background-color: aliceblue;
 }

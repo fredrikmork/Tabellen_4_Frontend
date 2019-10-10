@@ -1,45 +1,170 @@
 [
-    { 
-        "category": "Basics", 
-        "name": "Innkast", 
-        "quantity": 3, 
+    {
+        "category": "Basics",
+        "name": "Innkast",
+        "quantity": 2,
         "allDrink": false
     },
-    { 
-        "category": "Goals", 
-        "name": "Utspill", 
-        "quantity": 3, 
+    {
+        "category": "Basics",
+        "name": "Utspill",
+        "quantity": 2,
         "allDrink": false
     },
-    { 
-        "category": "Saf", 
-        "name": "Corner", 
-        "quantity": 3, 
+    {
+        "category": "Basics",
+        "name": "Corner",
+        "quantity": 2,
         "allDrink": false
     },
-
-    { 
-        "category": "Absurd", 
-        "name": "Offside", 
-        "quantity": 6, 
+    {
+        "category": "Basics",
+        "name": "Offside",
+        "quantity": 3,
         "allDrink": true
     },
-    { 
-        "category": "Basics", 
-        "name": "Skadebytte", 
-        "quantity": 10, 
+    {
+        "category": "Basics",
+        "name": "Skadeutbytte",
+        "quantity": 5,
         "allDrink": true
     },
-    { 
-        "category": "Goal", 
-        "name": "Vanlig", 
-        "quantity": 6, 
+    {
+        "category": "Goals",
+        "name": "Straffe",
+        "quantity": 4,
+        "allDrink": true
+    },
+    {
+        "category": "Goals",
+        "name": "Vanlig",
+        "quantity": 6,
         "allDrink": false
     },
-    { 
-        "category": "Goal", 
-        "name": "Scorpion", 
-        "quantity": 80, 
+    {
+        "category": "Goals",
+        "name": "Heading",
+        "quantity": 8,
+        "allDrink": false
+    },
+    {
+        "category": "Goals",
+        "name": "Langskudd",
+        "quantity": 8,
+        "allDrink": false
+    },
+    {
+        "category": "Goals",
+        "name": "Frispark",
+        "quantity": 10,
+        "allDrink": false
+    },
+    {
+        "category": "Goals",
+        "name": "Sweaty & Brasse",
+        "quantity": 20,
+        "allDrink": false
+    },
+    {
+        "category": "Goals",
+        "name": "69, 2x Sweaty & midtbane",
+        "quantity": 40,
+        "allDrink": false
+    },
+    {
+        "category": "Goals",
+        "name": "Scorpion & 3x sweaty",
+        "quantity": 80,
+        "allDrink": false
+    },
+    {
+        "category": "Fault",
+        "name": "Frispark",
+        "quantity": 2,
+        "allDrink": true
+    },
+    {
+        "category": "Fault",
+        "name": "Gult kort",
+        "quantity": 3,
+        "allDrink": false
+    },
+    {
+        "category": "Fault",
+        "name": "Red card",
+        "quantity": 5,
+        "allDrink": false
+    },
+    {
+        "category": "Fault",
+        "name": "5 red",
+        "quantity": 40,
+        "allDrink": false
+    },
+    {
+        "category": "Saf",
+        "name": "90 lgw*",
+        "quantity": 40,
+        "allDrink": false
+    },
+    {
+        "category": "Saf",
+        "name": "90m slgw*",
+        "quantity": 80,
+        "allDrink": true
+    },
+    {
+        "category": "Saf",
+        "name": "90m sw*",
+        "quantity": 120,
+        "allDrink": true
+    },
+    {
+        "category": "Saf",
+        "name": "90m sslgw*",
+        "quantity": 240,
+        "allDrink": false
+    },
+    {
+        "category": "Absurd",
+        "name": "Stolpeskudd",
+        "quantity": 4,
+        "allDrink": true
+    },
+    {
+        "category": "Absurd",
+        "name": "Filming",
+        "quantity": 10,
+        "allDrink": false
+    },
+    {
+        "category": "Absurd",
+        "name": "Glitch",
+        "quantity": 10,
+        "allDrink": false
+    },
+    {
+        "category": "Absurd",
+        "name": "Dab-feiring",
+        "quantity": 20,
+        "allDrink": false
+    },
+    {
+        "category": "Skills",
+        "name": "Elgefinta",
+        "quantity": 4,
+        "allDrink": false
+    },
+    {
+        "category": "Skills",
+        "name": "Kongefinta",
+        "quantity": 5,
+        "allDrink": true
+    },
+    {
+        "category": "Skills",
+        "name": "Luka",
+        "quantity": 6,
         "allDrink": false
     }
 ]

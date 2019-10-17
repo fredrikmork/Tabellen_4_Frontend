@@ -41,7 +41,7 @@ iframe {
     color: white;
     font-size: 0.7rem;
     text-align: left;
-    width: 326px;
+    width: 330px;
 }
 
 .ruleExplain th {
@@ -49,7 +49,8 @@ iframe {
 }
 
 .spotify {
-    margin-left: 8px;
+    position: absolute;
+    margin-left: -175px;
 }
 
 
@@ -66,7 +67,7 @@ iframe {
 }
 
 
-/* Create four equal columns that sits next to each other */
+/* Create three equal columns that sits next to each other */
 
 .column {
     width: 400px;

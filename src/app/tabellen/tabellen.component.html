@@ -22,6 +22,11 @@
                     <div class="column">
                         <tabellen-table [dataSource]="getRulesFromCategory('skills')"></tabellen-table>
                         <tabellen-table [dataSource]="getRulesFromCategory('goals')"></tabellen-table>
+
+                    </div>
+                    <div class="column">
+                        <tabellen-table [dataSource]="getRulesFromCategory('absurd')"></tabellen-table>
+                        <tabellen-table [dataSource]="getRulesFromCategory('saf')"></tabellen-table>
                         <div class="ruleExplain">
                             <table>
                                 <p>Asterisk (*) forklaring</p>
@@ -43,10 +48,6 @@
                                 </tr>
                             </table>
                         </div>
-                    </div>
-                    <div class="column">
-                        <tabellen-table [dataSource]="getRulesFromCategory('absurd')"></tabellen-table>
-                        <tabellen-table [dataSource]="getRulesFromCategory('saf')"></tabellen-table>
                     </div>
                 </div>
             </div>

@@ -1,11 +1,12 @@
 .container {
-    height: 180px;
+    height: 210px;
     position: sticky;
     width: 100vw;
     color: white;
     bottom: 0;
     text-align: center;
 }
+
 .column {
     display: inline-table;
     height: 150px;
@@ -16,11 +17,13 @@
 .spacer {
     flex: 1 1 auto;
 }
+
 a {
     color: white;
     text-decoration: none;
     display: inline;
 }
+
 a:hover {
     color: rgb(61, 206, 223);
 }
@@ -29,13 +32,18 @@ p {
     font-size: 0.6em;
     text-align: center;
 }
+
 li {
     list-style: none;
 }
+
 .liSo {
     font-size: 2em;
 }
+
+
 /*---Icons and buttons----*/
+
 .fa-instagram {
     color: white !important;
     text-align: center;
@@ -49,6 +57,7 @@ li {
     color: white !important;
     background: transparent;
 }
+
 .share-button:hover {
     color: rgb(61, 206, 223) !important;
 }
@@ -73,7 +82,9 @@ h1 {
 }
 
 footer {
+    position: relative;
     bottom: 0;
+    left: 0;
     width: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

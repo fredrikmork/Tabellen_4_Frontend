@@ -1,13 +1,13 @@
 <div class='card'>
     <div class='card-header'>
-        {{pageTitle}}
+        <br>
     </div>
     <div class='card-body'>
         <div class='row'>
             <div class='row' *ngIf='rules && rules.length'>
                 <div class='col-md6'>
                     <br>
-                    <h3>Tabellen 4</h3>
+                    <h3>{{pageTitle}} 4</h3>
                     <p>Original utgave</p>
                 </div>
                 <div class="container">
@@ -17,9 +17,7 @@
                     <tabellen-table [dataSource]="getRulesFromCategory('goals')"></tabellen-table>
                     <tabellen-table [dataSource]="getRulesFromCategory('absurd')"></tabellen-table>
                     <tabellen-table [dataSource]="getRulesFromCategory('saf')"></tabellen-table>
-                    <iframe class="spotify" src="https://open.spotify.com/embed/playlist/0hdKxmlIKGpz56mgec8Wm6"
-                        width="300" height="250" frameborder="0" allowtransparency="true"
-                        allow="encrypted-media"></iframe>
+                    <iframe class="spotify" src="https://open.spotify.com/embed/playlist/0hdKxmlIKGpz56mgec8Wm6" width="300" height="250" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     <!--<iframe class="spotify" src="https://open.spotify.com/embed/playlist/0u2tZnHtxoSoohFHZWgXM2"
                         width="300" height="250" frameborder="0" allowtransparency="true"
                         allow="encrypted-media"></iframe>-->
@@ -35,7 +33,7 @@
                                 <td>90 minute sweaty late goal winner</td>
                             </tr>
                             <tr>
-                                <td>90m  slgw= </td>
+                                <td>90m slgw= </td>
                                 <td>90 minute scorpion late goal winner</td>
                             </tr>
                             <tr>

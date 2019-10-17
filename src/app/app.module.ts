@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
 import { TabellenComponent } from './tabellen/tabellen.component';
 import { FooterComponent} from './footer/footer.component';
+//import { HelpComponent } from './help/help.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FooterComponent} from './footer/footer.component';
     NavbarComponent,
     TabellenComponent,
     TabellenTableComponent,
+    //HelpComponent,
     FooterComponent
   ],
   imports: [
@@ -31,7 +33,8 @@ import { FooterComponent} from './footer/footer.component';
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      {path: 'regler', component: TabellenComponent },
+      //{path: 'om', component: AboutComponent },
+      //{path: 'help', component: HelpComponent },
       {path: 'tabellen', component: TabellenComponent },
       {path: '', redirectTo: 'tabellen', pathMatch: 'full' },
       {path: '**', redirectTo: 'tabellen', pathMatch: 'full' }

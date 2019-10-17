@@ -1,14 +1,16 @@
 body {
     margin: 0;
 }
+
 mat-toolbar {
     background-color: #323232;
     position: sticky;
     position: -webkit-sticky;
-    top: 0; /* Sets the sticky toolbar to be on top */
+    top: 0;
+    /* Sets the sticky toolbar to be on top */
     z-index: 1000;
-    
 }
+
 mat-toolbar a {
     display: inline-block;
     margin: 0 10px;
@@ -18,65 +20,84 @@ mat-toolbar a {
     padding: 0;
     font-family: 'fifa';
     font-size: 1.5rem;
-}        
-mat-toolbar a:hover {
-    color: rgb(248, 86, 100);   
 }
+
+mat-toolbar a:hover {
+    color: rgb(248, 86, 100);
+}
+
 mat-toolbar a:active {
     color: rgb(243, 71, 91);
 }
+
+
 /*.mat-toolbar {
     height: 7vh;
 }*/
+
 div {
     overflow: inherit;
 }
-mat-sidenav-container{
+
+#t-logo {
+    width: 288px;
+    height: 162px;
+}
+
+.logo {
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-left: -23px;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    position: absolute;
+}
+
+mat-sidenav-container {
     min-height: 93vh !important;
     background: none;
-   
-} 
-button{
+}
+
+button {
     font-size: 110%;
     min-width: min-content;
-} 
+}
+
 .example-icon {
     padding: 0 14px;
 }
-.mat-sidenav-content{
+
+.mat-sidenav-content {
     font-size: 200%;
     text-align: center;
-}
-.t-logo {
-    width: 288px;
-    height: 162px;
-    display: block;
-    margin-top: -35px;
-    position: absolute;
-    left: 50%;
-    margin-left: -144px;
-    z-index: 99999;
 }
 
 .hamburger_icon {
     color: #fafafa;
 }
+
 .hamburger_icon a:hover {
     color: rgb(248, 86, 100);
 }
-.sidenav_field { 
+
+.sidenav_field {
     width: 100px;
 }
+
 .sidenav_field a {
     font-family: 'fifa';
     font-size: 1rem;
 }
+
 .sidenav_field a:hover {
     color: rgb(248, 86, 100);
 }
+
 .sidenav_field a:active {
     color: rgb(243, 71, 91);
 }
+
 .spacer {
     flex: 1 1 auto;
 }

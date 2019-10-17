@@ -1,4 +1,6 @@
-h3 { color: rgb(243,71,91);}
+h3 {
+    color: rgb(243, 71, 91);
+}
 
 p {
     color: white;
@@ -13,15 +15,17 @@ tabellen-table {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 0fr)); /* see notes below */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 0fr));
+    /* see notes below */
     justify-content: center;
 }
+
 iframe {
     margin-left: 50px;
 }
 
 .ruleExplain {
-    border: 2px solid white;;
+    border: 2px solid white;
     margin-left: 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
@@ -30,6 +34,6 @@ iframe {
     width: 296px;
 }
 
-.ruleExplain th{
+.ruleExplain th {
     background-color: aliceblue;
 }

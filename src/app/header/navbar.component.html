@@ -1,36 +1,36 @@
 <mat-toolbar>
-  <div fxShow="true" fxHide.gt-sm="true">
-    <button mat-icon-button (click)="sidenav.toggle()">
+    <div fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon class="hamburger_icon">menu</mat-icon>
     </button>
-  </div>
-
-  <a href="#">
-    <img src="../../assets/img/tabellen_logo.png" class="t-logo">
-  </a>
-  <span class="spacer"></span>
-  <div fxShow="true" fxHide.lt-md="true">
-    <a mat-button routerlink="/hjelp">Hjelp</a>
-    <a mat-button routerlink="/om">Om</a>
-    <a mat-button (click)="googleLogin()">Logg inn</a>
-    <a mat-button routerlink="#">
-  
-    </a>
-  </div>
+    </div>
+    <div class="logo">
+        <a href="#">
+            <img src="../../assets/img/tabellen_logo.png" id="t-logo">
+        </a>
+    </div>
+    <span class="spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+        <a mat-button routerlink="/help">Hjelp</a>
+        <a mat-button routerlink="/about">Om</a>
+        <a mat-button (click)="googleLogin()">Logg inn</a>
+        <a mat-button routerlink="#">
+        </a>
+    </div>
 </mat-toolbar>
 
 <mat-sidenav-container fxFlexFill class="example-container">
-  <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
-    <div fxLayout="column" class="sidenav_field">
-      <a mat-button routerLink="/hjelp">Hjelp</a>
-      <a mat-button routerLink="/om">Om</a>
-      <a mat-button (click)="googleLogin()">Logg inn</a>
-      <a mat-button routerLink="#">
-        <mat-icon>home</mat-icon>
-      </a>
-    </div>
-  </mat-sidenav>
-  <mat-sidenav-content fxFlexFill>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
+    <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
+        <div fxLayout="column" class="sidenav_field">
+            <a mat-button routerLink="/hjelp">Hjelp</a>
+            <a mat-button routerLink="/om">Om</a>
+            <a mat-button (click)="googleLogin()">Logg inn</a>
+            <a mat-button routerLink="#">
+                <mat-icon>home</mat-icon>
+            </a>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
 </mat-sidenav-container>

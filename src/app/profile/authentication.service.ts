@@ -1,22 +1,32 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { auth, User } from 'firebase/app';
+import { auth, User } from 'firebase';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
   user: User;
+  
 
-  constructor(public afAuth: AngularFireAuth) {
+  constructor(private afAuth: AngularFireAuth) {
     this.afAuth.authState.subscribe(user => {
       if (user) {
+        localStorage.setItem('user', JSON.stringify(user));
         this.user = user;
-        localStorage.setItem('user', JSON.stringify(this.user));
       } else {
         localStorage.setItem('user', null);
       }
     })
+  }
+
+  getUserFromLocalStorage() {
+    console.log(localStorage.getItem('user'));
+    return JSON.parse(localStorage.getItem('user'));
+  }
+
+  currentUserObservable(): any {
+    return this.afAuth.authState
   }
 
   GoogleAuth() {

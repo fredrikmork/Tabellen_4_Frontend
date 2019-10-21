@@ -14,8 +14,8 @@
                 {{ rule.quantity
                 < 11 ? rule.quantity + ' slurker' : '' }} <div [ngSwitch]="rule.quantity">
                     <div class="tooltip" *ngSwitchCase="90 lgw"><span class="tooltiptext" [ngClass]="">90
-              minute late goal
-              winner</span></div>
+                            minute late goal
+                            winner</span></div>
                     <div *ngSwitchCase="20">1/2 <span [ngClass]="rule.quantity < 11 ? '' : 'fas fa-beer' "></span></div>
                     <div *ngSwitchCase="40">1 <span [ngClass]="rule.quantity < 11 ? '' : 'fas fa-beer' "></span></div>
                     <div *ngSwitchCase="80">2 <span [ngClass]="rule.quantity < 11 ? '' : 'fas fa-beer' "></span></div>

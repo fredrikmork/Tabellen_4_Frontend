@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from 'app/profile/authentication.service';
+import { User } from 'firebase';
 
 @Component({
   selector: 'navbar',
@@ -8,12 +9,19 @@ import { AuthenticationService } from 'app/profile/authentication.service';
 })
 
 export class NavbarComponent {
-
-  constructor(private authService: AuthenticationService) { }
+constructor(private authService: AuthenticationService) { }
   pageTitle: string = 'Tabellen';
+  userName:String;
 
   ngOnInit() {
-    console.log(this.authService.getUserName)
+    this.authService.currentUserObservable().subscribe((user) => {
+      console.log("LOGIN HAR SKEJDD")
+      console.log(user);
+      this.userName = user.displayName;
+    });
+
+
+    
     window.onscroll = function () {
       var Logo = document.getElementById("t-logo")
       if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
@@ -29,7 +37,15 @@ export class NavbarComponent {
   }
 
   googleLogin() {
-    this.authService.GoogleAuth();
+    this.authService.GoogleAuth().then(() => this.userName = this.authService.getUserName());
+  }
+
+  getUserName(){
+    console.log(this.authService.getUserName());
+  }
+
+  getUser(){
+    return this.userName.replace('ø', 'oe');
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from 'app/profile/authentication.service';
 import { User } from 'firebase';
+import { GameService } from 'app/game/game.service';
 
 @Component({
   selector: 'navbar',
@@ -9,7 +10,7 @@ import { User } from 'firebase';
 })
 
 export class NavbarComponent {
-constructor(private authService: AuthenticationService) { }
+constructor(private authService: AuthenticationService, private gameService: GameService) { }
   pageTitle: string = 'Tabellen';
   userName:String;
 
@@ -18,6 +19,7 @@ constructor(private authService: AuthenticationService) { }
       console.log("LOGIN HAR SKEJDD")
       console.log(user);
       this.userName = user.displayName;
+      this.gameService.getDocument().subscribe();
     });
 
 
@@ -45,7 +47,15 @@ constructor(private authService: AuthenticationService) { }
   }
 
   getUser(){
-    return this.userName.replace('ø', 'oe');
+    return this.userName;
+  }
+
+  createGame(){
+    this.gameService.createGame(this.getUser());
+  }
+
+  joinGame(){
+    this.gameService.joinGame(this.getUser());
   }
 
 }

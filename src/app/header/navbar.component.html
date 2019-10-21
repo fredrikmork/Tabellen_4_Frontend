@@ -11,8 +11,8 @@
     </div>
     <span class="spacer"></span>
     <div fxShow="true" fxHide.lt-md="true">
-        <a mat-button routerLink="help">Hjelp</a>
-        <a mat-button (click)="getUserName()">Om</a>
+        <a mat-button (click)="joinGame()">Hjelp</a>
+        <a mat-button (click)="createGame()">Create Game</a>
         <a mat-button (click)="googleLogin()">{{ !getUser() ? 'Logg inn' : userName.replace('ø', 'oe').replace('æ', 'ae').replace('å', 'aa') }}</a>
         <a mat-button routerLink="#">
         </a>

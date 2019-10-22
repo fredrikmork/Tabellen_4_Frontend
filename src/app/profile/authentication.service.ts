@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth, User } from 'firebase';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -9,11 +10,15 @@ export class AuthenticationService {
   user: User;
   
 
-  constructor(private afAuth: AngularFireAuth) {
+  constructor(private afAuth: AngularFireAuth, private firestore: AngularFirestore ) {
+
+
     this.afAuth.authState.subscribe(user => {
+      
       if (user) {
         localStorage.setItem('user', JSON.stringify(user));
         this.user = user;
+        this.addUser(this.user)
       } else {
         localStorage.setItem('user', null);
       }
@@ -51,6 +56,15 @@ export class AuthenticationService {
   getUser() {
     return this.user;
   }
+
+  addUser(user:User) {
+    let users = this.firestore.collection('users').doc(this.user.uid);
+    
+    users.set({displayName: this.user.displayName, idToken:this.user.uid});
+  }
+
+  
+
 }
 
 

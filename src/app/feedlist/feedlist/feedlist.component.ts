@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { UsersService } from 'app/profile/users.service';
 import { IUser } from '../../profile/user.model';
-import { Observable } from 'rxjs';
+
 
 
 @Component({
@@ -12,16 +12,17 @@ import { Observable } from 'rxjs';
 })
 export class FeedlistComponent implements OnInit {
 
-  constructor(private userService: UsersService ,private firestore: AngularFirestore) {
-  }
+  constructor(private userService: UsersService ,private firestore: AngularFirestore) { }
   users:IUser[];
 
   ngOnInit() {
+    console.log('Liste av brukerne:');
     this.listUsers();
   }
 
   listUsers() {
-    this.userService.listUsers().subscribe((users) => {
+
+    this.userService.getUsersList().subscribe((users) => {
       this.users = users;
     });
   }

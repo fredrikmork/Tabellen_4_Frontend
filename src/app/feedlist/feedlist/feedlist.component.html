@@ -3,8 +3,8 @@
     <mat-form-field>
         <mat-label>Spill med...</mat-label>
         <mat-select>
-            <mat-option *ngFor="let user of users">
-                {{user.displayName}}
+            <mat-option *ngFor="let user of users | async" [value]="users.displayName">
+                {{user}}
             </mat-option>
         </mat-select>
     </mat-form-field>

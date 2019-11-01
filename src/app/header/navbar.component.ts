@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from 'app/profile/authentication.service';
-import { User } from 'firebase';
 import { GameService } from 'app/game/game.service';
 
 @Component({

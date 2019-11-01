@@ -1,0 +1,23 @@
+form {
+    width: 330px;
+    height: 250px;
+    background-color: rgb(66, 66, 66);
+    font-size: 2rem;
+}
+
+mat-form-field {
+    color: white;
+}
+
+mat-label {
+    color: white;
+}
+
+mat-option {
+    background-color: rgb(55, 55, 55);
+    color: white;
+}
+
+mat-option:hover {
+    color: rgb(243, 71, 91);
+}

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { IUser } from 'app/profile/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +15,8 @@ export class GameService {
 
   }
 
-  joinGame(user) {
-    console.log('Hei brukerid: ' + user.uid);
+  joinGame(user: IUser) {
+    console.log('Hei bruker: ' + JSON.stringify(user.displayName));
     const game = this.angularFireStore.collection('game').doc(user.uid);
     game.update({joiner: user.displayName, state: 2});
 

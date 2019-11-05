@@ -51,8 +51,4 @@ constructor(private authService: AuthenticationService, private gameService: Gam
     this.gameService.createGame(this.getUser());
   }
 
-  joinGame() {
-    this.gameService.joinGame(this.getUser());
-  }
-
 }

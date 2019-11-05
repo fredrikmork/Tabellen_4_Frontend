@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
 import { AuthenticationService } from 'app/profile/authentication.service';
 import { UsersService } from 'app/profile/users.service';
 import { IUser } from '../../profile/user.model';
@@ -33,8 +32,9 @@ export class FeedlistComponent implements OnInit {
     });
   }
 
-  joinGame(user: IUser) {
-    this.gameService.joinGame(user);
+  joinGame(joiner: IUser) {
+    console.log('Join game med: ' + joiner.displayName);
+    this.gameService.joinGame(joiner);
   }
 
   getUsername() {

@@ -3,8 +3,8 @@
     <mat-form-field>
         <mat-label>Spill med...</mat-label>
         <mat-select>
-            <mat-option *ngFor="let user of users" [value]="user.displayName" onclick="joinGame()">
-                {{user.displayName}}
+            <mat-option *ngFor="let user of getOtherUsers()" [value]="user.displayName" (click)="joinGame(user)">
+                {{ user.displayName }}
             </mat-option>
         </mat-select>
     </mat-form-field>

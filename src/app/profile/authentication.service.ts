@@ -8,21 +8,17 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class AuthenticationService {
   user: User;
-  
 
   constructor(private afAuth: AngularFireAuth, private firestore: AngularFirestore ) {
-
-
     this.afAuth.authState.subscribe(user => {
-      
       if (user) {
         localStorage.setItem('user', JSON.stringify(user));
         this.user = user;
-        this.addUser(this.user)
+        this.addUser(this.user);
       } else {
         localStorage.setItem('user', null);
       }
-    })
+    });
   }
 
   getUserFromLocalStorage() {
@@ -31,7 +27,7 @@ export class AuthenticationService {
   }
 
   currentUserObservable(): any {
-    return this.afAuth.authState
+    return this.afAuth.authState;
   }
 
   GoogleAuth() {
@@ -42,12 +38,11 @@ export class AuthenticationService {
   AuthLogin(provider) {
     return this.afAuth.auth.signInWithPopup(provider)
       .then((result) => {
-        console.log('You have been successfully logged in!')
+        console.log('You have been successfully logged in!');
       }).catch((error) => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }
- 
 
   getUserName() {
     return this.user.displayName;
@@ -57,13 +52,11 @@ export class AuthenticationService {
     return this.user;
   }
 
-  addUser(user:User) {
-    let users = this.firestore.collection('users').doc(this.user.uid);
-    
-    users.set({displayName: this.user.displayName, idToken:this.user.uid});
-  }
+  addUser(user: User) {
+    const users = this.firestore.collection('users').doc(this.user.uid);
 
-  
+    users.set({displayName: this.user.displayName, idToken: this.user.uid});
+  }
 
 }
 

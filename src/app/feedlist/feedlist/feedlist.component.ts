@@ -12,16 +12,18 @@ import { GameService } from 'app/game/game.service';
   styleUrls: ['./feedlist.component.css']
 })
 export class FeedlistComponent implements OnInit {
-  userName:String;
-  users:IUser[];
+  userName: string;
+  users: IUser[];
 
-  constructor(private userService: UsersService ,private firestore: AngularFirestore, private gameService: GameService, private authService: AuthenticationService) { }
+  constructor(private userService: UsersService, private gameService: GameService, private authService: AuthenticationService) { }
+
   ngOnInit() {
     this.authService.currentUserObservable().subscribe((user) => {
       this.userName = user.displayName;
       this.gameService.getDocument().subscribe();
     });
     this.listUsers();
+    this.getOtherUsers();
   }
 
   listUsers() {
@@ -31,7 +33,20 @@ export class FeedlistComponent implements OnInit {
     });
   }
 
-  joinGame(){
-    this.gameService.joinGame(this.userName);
+  joinGame(user: IUser) {
+    this.gameService.joinGame(user);
+  }
+
+  getUsername() {
+    return this.userName;
+  }
+
+  getOtherUsers() {
+    if (!this.users) {
+      return [];
+    }
+    return this.users.filter((users) => {
+      return users.displayName !== this.getUsername();
+    });
   }
 }

@@ -1,37 +1,35 @@
-import { Component, ViewChild, Input } from "@angular/core";
+import { Component, ViewChild, Input, OnInit } from '@angular/core';
 import { MatSort} from '@angular/material';
-import { HttpClient, HttpErrorResponse } from "@angular/common/http";
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 
 @Component({
-    selector: 'tabellen-table',
+    selector: ('tabellen-table'),
     templateUrl: './tabellen-table.component.html',
     styleUrls: ['./tabellen-table.component.css']
 })
 
 
-export class TabellenTableComponent {
-    pageTitle: string = 'Tabellen';
+export class TabellenTableComponent implements OnInit {
+    pageTitle: 'Tabellen';
     displayedColumns: string [] = ['name', 'quantity', 'allDrink'];
     test: string;
     @Input() dataSource;
 
-    
+
     constructor(private http: HttpClient) {}
 
     @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-    ngOnInit() { 
+    ngOnInit() {
       console.log(this.dataSource);
-      this.test= this.dataSource[0].category;
-      console.log("Denne er: " + this.test);
+      this.test = this.dataSource[0].category;
+      console.log('Denne er: ' + this.test);
     }
 
-  logg(){
-    console.log("hei");
-   
+  logg() {
+    console.log('hei');
   }
 
- 
 }
 

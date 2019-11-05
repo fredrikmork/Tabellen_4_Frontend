@@ -2,7 +2,7 @@ form {
     width: 330px;
     height: 250px;
     background-color: rgb(66, 66, 66);
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 mat-form-field {

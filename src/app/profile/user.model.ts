@@ -1,5 +1,4 @@
-export class IUser{
-    uid:String;
-    displayName:String;
-
+export class IUser {
+    uid: string;
+    displayName: string;
 }

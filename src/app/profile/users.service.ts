@@ -11,17 +11,13 @@ export class UsersService {
   userCollection: AngularFirestoreCollection<IUser>;
   users: Observable<IUser[]>;
 
-  constructor(private afs: AngularFirestore) {  
+  constructor(private afs: AngularFirestore) {
     this.userCollection = afs.collection<IUser>('users');
-    this.users =this.userCollection.valueChanges();
-  }
-  
-  getUsersList():Observable<IUser[]> {
-    return this.users;
+    this.users = this.userCollection.valueChanges();
   }
 
-  getDocument() {
-   
+  getUsersList(): Observable<IUser[]> {
+    return this.users;
   }
 
 }

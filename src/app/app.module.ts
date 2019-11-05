@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from "@angular/router";
-import { MatTableModule } from "@angular/material/table";
+import { RouterModule } from '@angular/router';
+import { MatTableModule } from '@angular/material/table';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { AngularFireModule } from '@angular/fire';
@@ -12,13 +12,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatSelectModule} from '@angular/material/select';
 
-
-
 import { AuthenticationService } from './profile/authentication.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './header/navbar.component';
-import { TabellenTableComponent } from "./tabellen/tabellen-table.component";
+import { TabellenTableComponent } from './tabellen/tabellen-table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
 import { TabellenComponent } from './tabellen/tabellen.component';
@@ -41,13 +39,12 @@ import { FeedlistComponent } from './feedlist/feedlist/feedlist.component';
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      //{path: 'om', component: AboutComponent },
+      // {path: 'om', component: AboutComponent },
       {path: 'help', component: HelpComponent },
       {path: 'tabellen', component: TabellenComponent },
-      {path: 'feed', component:FeedlistComponent},
+      {path: 'feed', component: FeedlistComponent},
       {path: '', redirectTo: 'tabellen', pathMatch: 'full' },
-      {path: '**', redirectTo: 'tabellen', pathMatch: 'full' },
-      
+      {path: '**', redirectTo: 'tabellen', pathMatch: 'full' }
     ]),
     MaterialModule,
     MatSidenavModule,
@@ -59,7 +56,7 @@ import { FeedlistComponent } from './feedlist/feedlist/feedlist.component';
     NgbModule,
     MatSelectModule
   ],
-  exports:[RouterModule],
+  exports: [RouterModule],
   providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })

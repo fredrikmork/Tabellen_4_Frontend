@@ -8,7 +8,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 })
 
 export class TabellenComponent implements OnInit {
-    pageTitle: 'Tabellen';
+    pageTitle = 'Tabellen';
     rules =  undefined;
 
     constructor(private http: HttpClient) {}

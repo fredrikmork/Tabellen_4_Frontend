@@ -21,6 +21,7 @@ constructor(private authService: AuthenticationService, private gameService: Gam
       this.gameService.getDocument().subscribe();
     });
 
+    // tslint:disable-next-line: only-arrow-functions
     window.onscroll = function() {
       const Logo = document.getElementById('t-logo');
       if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
@@ -33,6 +34,7 @@ constructor(private authService: AuthenticationService, private gameService: Gam
         Logo.style.marginTop = '0px';
       }
     };
+
   }
 
   googleLogin() {

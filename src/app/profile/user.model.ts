@@ -1,4 +1,4 @@
 export class IUser {
-    uid: string;
+    idToken: string;
     displayName: string;
 }

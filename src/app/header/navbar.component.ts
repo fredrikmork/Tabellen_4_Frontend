@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'app/profile/authentication.service';
 import { GameService } from 'app/game/game.service';
+import { Button } from 'protractor';
 
 @Component({
   selector: ('navbar'),
@@ -39,6 +40,9 @@ constructor(private authService: AuthenticationService, private gameService: Gam
 
   googleLogin() {
     this.authService.GoogleAuth().then(() => this.userName = this.authService.getUserName());
+  }
+  googleLogout() {
+    // TODO
   }
 
   getUserName() {

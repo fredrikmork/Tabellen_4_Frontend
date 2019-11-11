@@ -4,7 +4,8 @@ import { MatButtonModule,
     MatListModule,
     MatIconModule,
     MatToolbarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatMenuModule
 } from '@angular/material';
 
 import {MatExpansionModule} from '@angular/material/expansion';
@@ -20,7 +21,8 @@ import { NgModule } from '@angular/core';
               MatToolbarModule,
               MatSidenavModule,
               FlexLayoutModule,
-              MatExpansionModule
+              MatExpansionModule,
+              MatMenuModule
               // AngularFontAwesomeModule
               ],
     exports: [MatButtonModule,

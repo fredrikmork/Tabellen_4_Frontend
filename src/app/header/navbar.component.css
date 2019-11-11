@@ -101,3 +101,29 @@ button {
 .spacer {
     flex: 1 1 auto;
 }
+
+.dropdown {
+    font-family: 'fifa';
+    color: white;
+}
+
+.dropdown-content {
+    color: white;
+    background-color: rgb(55, 55, 55) !important;
+}
+
+.dropdown-content:hover {
+    color: rgb(243, 71, 91);
+}
+
+.dropdown-content button {
+    background-color: rgb(60, 60, 60);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-btn {
+    background-color: rgb(66, 66, 66);
+}

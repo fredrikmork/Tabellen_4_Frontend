@@ -34,7 +34,7 @@ export class FeedlistComponent implements OnInit {
 
   joinGame(joiner: IUser, userName: string) {
     console.log('Join game med: ' + joiner.displayName);
-    this.gameService.joinGame(joiner, userName);
+    this.gameService.joinGame(joiner, this.getUsername());
   }
 
   getUsername() {

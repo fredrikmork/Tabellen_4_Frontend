@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection, DocumentChangeAction } from '@angular/fire/firestore';
 import { IUser } from 'app/profile/user.model';
 
 @Injectable({
@@ -15,19 +15,16 @@ export class GameService {
 
   }
 
-  joinGame(user: IUser, userName: string) {
-    const gameId = this.angularFireStore.collection('game').doc(userName);
-    console.log('Game id:');
-    console.log(gameId);
-   // this.angularFireStore.collection('game').snapshotChanges((snapshot) => {
-     // const gameId = snapshot.getRef().getId();
-      // getParent().getParent().collection('game');
-     // console.log(gameId);
-     // const game = this.angularFireStore.collection('game').doc(gameId);
-     // game.update({joiner: user.displayName, state: 2});
-    // });
+  async joinGame(user: IUser, userName: string) {
+    const snapshotResult = this.angularFireStore.collection('game', ref =>
+          ref.where('creator', '==', userName).limit(1)).snapshotChanges();
 
+    snapshotResult.subscribe(doc => {
+      const game = this.angularFireStore.collection('game').doc(doc[0].payload.doc.id);
+      game.update({joiner: user.displayName, state: 2});
+    });
   }
+
   getDocument() {
     const db = this.angularFireStore.collection('game');
     return db.snapshotChanges();

@@ -44,6 +44,11 @@ li {
 
 /*---Icons and buttons----*/
 
+.mat-icon {
+    font-size: 200px;
+    height: 200px;
+}
+
 .fa-instagram {
     color: white !important;
     text-align: center;

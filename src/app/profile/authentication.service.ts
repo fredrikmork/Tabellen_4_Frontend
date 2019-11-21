@@ -44,6 +44,15 @@ export class AuthenticationService {
       });
   }
 
+  logout() {
+    return this.afAuth.auth.signOut()
+      .then((result) => {
+        console.log('You have been signed out!');
+      }).catch((error) => {
+        console.log(error);
+      });
+  }
+
   getUserName() {
     return this.user.displayName;
   }

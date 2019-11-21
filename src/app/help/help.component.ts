@@ -9,10 +9,10 @@ import { AuthenticationService } from 'app/profile/authentication.service';
 
 export class HelpComponent implements OnInit {
     pageTitle: 'Tabellen';
-    userName: string;
+   // userName: string;
     constructor(private authService: AuthenticationService) {}
     ngOnInit() {
-        this.userName = this.authService.getUserName();
-        console.log(this.userName);
+       // this.userName = this.authService.getUserName();
+       // console.log(this.userName);
     }
 }

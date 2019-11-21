@@ -11,11 +11,11 @@
     </div>
     <span class="spacer"></span>
     <div class="dropdown" fxShow="true" fxHide.lt-md="true">
-        <a class="dropdown-btn" mat-button [matMenuTriggerFor]="menu" (click)="googleLogin()">{{ !getUser() ? 'Logg inn' : userName.replace('ø', 'oe').replace('æ', 'ae').replace('å', 'aa') }}</a>
+        <a class="dropdown-btn" #trigger="matMenuTrigger" mat-button [matMenuTriggerFor]="menu" (click)="googleLogin()">{{ !getUser() ? 'Logg inn' : userName.replace('ø', 'oe').replace('æ', 'ae').replace('å', 'aa') }}</a>
         <mat-menu #menu="matMenu" class="dropdown-content">
             <a mat-menu-item routerLink="feed" (click)="createGame()">Spill Tabellen</a>
             <a mat-menu-item routerLink="help">Hjelp</a>
-            <a mat-menu-item>Logg ut</a>
+            <a mat-menu-item (click)="googleLogout()">Logg ut</a>
         </mat-menu>
     </div>
 </mat-toolbar>

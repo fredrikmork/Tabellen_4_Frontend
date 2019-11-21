@@ -4,7 +4,7 @@
     color: white;
     margin-top: 125px;
     width: 100%;
-    column-count: 3;
+    column-count: 2;
 }
 
 .column {
@@ -13,6 +13,7 @@
     width: 30vw;
     font-size: 0.7rem;
     height: 100%;
+    margin-top: 5%;
 }
 
 .header-row {

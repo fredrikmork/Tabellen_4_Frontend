@@ -10,19 +10,22 @@ import { Button } from 'protractor';
 })
 
 export class NavbarComponent implements OnInit {
-constructor(private authService: AuthenticationService, private gameService: GameService) { }
+  constructor(private authService: AuthenticationService, private gameService: GameService) { }
   pageTitle: 'Tabellen';
   userName: string;
 
   ngOnInit() {
     this.authService.currentUserObservable().subscribe((user) => {
-      console.log('LOGIN HAR SKEJDD');
       console.log(user);
-      this.userName = user.displayName;
-      this.gameService.getDocument().subscribe();
+      try {
+        this.userName = user.displayName;
+        this.gameService.getDocument().subscribe();
+      } catch (e) {
+        console.log(e);
+      }
     });
 
-    // tslint:disable-next-line: only-arrow-functions
+        // tslint:disable-next-line: only-arrow-functions
     window.onscroll = function() {
       const Logo = document.getElementById('t-logo');
       if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
@@ -35,14 +38,17 @@ constructor(private authService: AuthenticationService, private gameService: Gam
         Logo.style.marginTop = '0px';
       }
     };
-
   }
 
   googleLogin() {
+    if (this.userName) {
+      return;
+    }
     this.authService.GoogleAuth().then(() => this.userName = this.authService.getUserName());
   }
   googleLogout() {
-    // TODO
+    this.authService.logout();
+    this.userName = undefined;
   }
 
   getUserName() {

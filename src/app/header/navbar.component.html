@@ -4,11 +4,13 @@
             <mat-icon class="hamburger_icon">menu</mat-icon>
         </button>
     </div>
+
     <div class="logo">
         <a routerLink="tabellen">
             <img src="../../assets/img/tabellen_logo.png" id="t-logo">
         </a>
     </div>
+
     <span class="spacer"></span>
     <div class="dropdown" fxShow="true" fxHide.lt-md="true">
         <a class="dropdown-btn" #trigger="matMenuTrigger" mat-button [matMenuTriggerFor]="menu" (click)="googleLogin()">{{ !getUser() ? 'Logg inn' : userName.replace('ø', 'oe').replace('æ', 'ae').replace('å', 'aa') }}</a>
@@ -18,17 +20,15 @@
             <a mat-menu-item (click)="googleLogout()">Logg ut</a>
         </mat-menu>
     </div>
+
 </mat-toolbar>
 
 <mat-sidenav-container fxFlexFill class="example-container">
-    <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
+    <mat-sidenav #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
         <div fxLayout="column" class="sidenav_field">
+            <!--<a mat-button routerLink="feed" (click)="createGame()">Spill Tabellen</a>-->
             <a mat-button routerLink="help">Hjelp</a>
-            <a mat-button routerLink="/om">Om</a>
-            <a mat-button (click)="googleLogin()">Logg inn</a>
-            <a mat-button routerLink="#">
-                <mat-icon>home</mat-icon>
-            </a>
+            <a class="dropdown-btn" #trigger="matMenuTrigger" mat-button [matMenuTriggerFor]="menu" (click)="googleLogin()">{{ !getUser() ? 'Logg inn' : userName.replace('ø', 'oe').replace('æ', 'ae').replace('å', 'aa') }}</a>
         </div>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>

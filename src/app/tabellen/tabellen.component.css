@@ -27,7 +27,7 @@ tabellen-table {
     max-width: 1200px;
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(370px, 0fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 0fr));
 }
 
 iframe {
@@ -50,7 +50,14 @@ iframe {
 
 .spotify {
     position: absolute;
-    margin-left: -175px;
+    margin-left: 7px;
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
 }
 
 
@@ -73,14 +80,19 @@ iframe {
     width: 400px;
     -ms-flex: 25%;
     /* IE10 */
-    flex: 25%;
+    flex: 10%;
+    /*25*/
     /*max-width: 25%;*/
     padding: 0 4px;
+    height: 836px;
+}
+
+.column c3 {
+    margin-top: -50px;
 }
 
 .column tabellen-table {
     margin-top: 8px;
-    vertical-align: middle;
     width: 100%;
 }
 
@@ -98,10 +110,11 @@ iframe {
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .column {
         -ms-flex: 100%;
         flex: 100%;
         max-width: 100%;
+        margin-left: 20vw;
     }
 }
